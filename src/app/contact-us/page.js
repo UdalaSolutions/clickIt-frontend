@@ -128,7 +128,7 @@ const ContactUsPage = () => {
 
 						<label className='flex flex-col text-sm text-[#6B7280]'>
 							<span className='mb-2'>Phone number</span>
-							<div className='flex items-center gap-3'>
+							<div className='flex items-center gap-1 sm:gap-3'>
 								<div className='flex items-center gap-2 bg-white rounded-lg border border-gray-200 px-3 py-2'>
 									<select
 										aria-label='Select country'

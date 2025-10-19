@@ -7,8 +7,8 @@ const Footer = () => {
 
 	return (
 		<>
-			<div className='h-[60vh]'></div>
-			<footer className='bg-[#071226] text-white relative pt-12 '>
+			<div className='h-[50vh] md:h-96'></div>
+			<footer className='bg-[#071226] text-white relative sm:pt-12 '>
 				{/* Promo card that overlaps the footer */}
 
 				<div className='absolute left-1/2 transform -translate-x-1/2 -top-1/2 w-[min(1100px,92%)]'>
@@ -43,10 +43,10 @@ const Footer = () => {
 								</svg>
 
 								{/* Content */}
-								<h2 className='text-[32px] leading-12 text-center font-bold  text-white max-w-md mx-auto'>
+								<h2 className='text-2xl sm:text-[32px] leading-9 sm:leading-12 text-center font-bold  text-white max-w-md mx-auto'>
 									Your airtime can do more, play now and win big!
 								</h2>
-								<p className='text-[#F2F2F2] mt-4 max-w-lg mx-auto'>
+								<p className='text-sm sm:text-base text-[#F2F2F2] mt-4 max-w-lg mx-auto'>
 									Don&apos;t just top up — play for a chance to win. Text the
 									keyword to our short code and get in on the next draw.
 								</p>
@@ -55,7 +55,7 @@ const Footer = () => {
 									<button
 										className='inline-flex items-center gap-3 bg-[#FAAA32]  text-[#081726] font-semibold py-3 px-6 rounded-full shadow-2xl hover:scale-[1.02] transition-transform '
 										aria-label='SMS CTA'>
-										<span className='text-2xl/8 font-bold '>
+										<span className='text-base md:text-2xl/8 font-bold '>
 											SMS ‘CW’ to ‘52011’
 										</span>
 									</button>
@@ -66,7 +66,7 @@ const Footer = () => {
 				</div>
 
 				{/* Footer main area (pushed down to make room for overlapping promo) */}
-				<div className='pt-44 pb-12'>
+				<div className='pt-28 sm:pt-40 md:pt-44 pb-12'>
 					<div className='max-w-6xl mx-auto px-6'>
 						<div className='flex flex-col md:flex-row md:items-start md:justify-between gap-10'>
 							{/* Brand */}

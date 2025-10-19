@@ -4,10 +4,12 @@ import { winners } from '@/app/utils/utils';
 
 const LuckyWinners = () => {
 	return (
-		<section className='bg-white py-14 px-3 flex items-center justify-center flex-col'>
+		<section className='bg-white py-14 flex items-center justify-center flex-col px-3.5 md:px-0'>
 			<div className='text-center'>
-				<h2 className='font-bold text-3xl md:text-4xl'>Our lucky winners</h2>
-				<p className='max-w-3xl mx-auto mt-4 text-gray-600'>
+				<h2 className='font-bold text-2xl sm:text-3xl md:text-4xl'>
+					Our lucky winners
+				</h2>
+				<p className='text-sm sm:text-base max-w-3xl mx-auto mt-4 text-gray-600'>
 					Don&apos;t just take our words - hear from our winners
 				</p>
 			</div>
@@ -31,12 +33,14 @@ const LuckyWinners = () => {
 							{/* Winner Info */}
 							<div className='p-5 bg-[#F2F2F2]'>
 								<div className='flex justify-between items-start mb-3'>
-									<span className='font-bold text-foreground'>
+									<span className='text-sm sm:text-base font-bold text-foreground'>
 										{winner.phone}
 									</span>
-									<span className='text-[#3D3D3D]'>{winner.date}</span>
+									<span className='text-[#3D3D3D] text-sm sm:text-base'>
+										{winner.date}
+									</span>
 								</div>
-								<div className='text-[20px] font-bold text-foreground'>
+								<div className='text-base sm:text-[20px] font-bold text-foreground'>
 									{winner.amount}
 								</div>
 							</div>
@@ -45,8 +49,8 @@ const LuckyWinners = () => {
 				</div>
 
 				{/* See All Button */}
-				<div className='flex justify-center mt-10'>
-					<button className='bg-[#FAAA32] text-black font-semibold px-12 py-4 rounded-full transition-colors shadow-[0px_4px_0px_0px_#0B132A] flex items-center justify-center w-sm mx-auto cursor-pointer'>
+				<div className='flex justify-center mt-8 smd:mt-10'>
+					<button className='bg-[#FAAA32] text-black font-semibold px-12 py-4 rounded-full transition-colors shadow-[0px_4px_0px_0px_#0B132A] flex items-center justify-center w-xs sm:w-sm mx-auto cursor-pointer'>
 						See all
 					</button>
 				</div>

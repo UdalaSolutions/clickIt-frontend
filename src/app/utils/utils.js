@@ -1,8 +1,8 @@
 export const navLinks = [
-	{ href: '#home', label: 'Home' },
-	{ href: '#winners', label: 'Winners' },
-	{ href: '#about', label: 'About us' },
-	{ href: '#contact', label: 'Contact us' },
+	{ href: '/', label: 'Home' },
+	{ href: '/lucky-winner', label: 'Winners' },
+	{ href: '/about-us', label: 'About Us' },
+	{ href: '/contact-us', label: 'Contact' },
 ];
 
 export const socialIcons = [

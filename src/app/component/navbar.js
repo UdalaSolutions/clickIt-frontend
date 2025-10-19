@@ -1,35 +1,82 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Icon } from '@iconify/react';
+import { navLinks } from '../utils/utils';
 
 const Navbar = () => {
+	const [menuOpen, setMenuOpen] = useState(false);
+	const pathname = usePathname();
+
 	return (
-		<>
-			<header>
-				<nav className='flex items-center justify-between bg-white p-4 shadow-sm fixed top-0 left-0 right-0 z-50 w-full px-8'>
-					<div className=''>
-						<Image
-							src='/clickit-logo.svg'
-							alt='Logo'
-							width={163}
-							height={50}
-						/>
-					</div>
-					<ul className='flex items-center gap-3'>
-						<li>
-							<a href='#'>Home</a>
+		<header className='fixed top-0 left-0 right-0 bg-white shadow-sm z-50'>
+			<nav className='flex items-center justify-between px-6 md:px-10 py-4'>
+				{/* Logo */}
+				<Link href='/'>
+					<Image
+						src='/clickit-logo.svg'
+						alt='Logo'
+						width={163}
+						height={50}
+						className='cursor-pointer w-[130px] h-10 md:w-[163px] md:h-12.5'
+					/>
+				</Link>
+
+				{/* Hamburger Icon */}
+				<button
+					className='md:hidden bg-[#FAAA321A] h-12.5 w-12.5 rounded-full flex items-center justify-center cursor-pointer'
+					onClick={() => setMenuOpen(!menuOpen)}
+					aria-label='Toggle menu'>
+					<Icon
+						icon={menuOpen ? 'mdi:close' : 'mdi:menu'}
+						className='text-[#faaa32] h-6 w-6'
+					/>
+				</button>
+
+				{/* Nav Links (Desktop) */}
+				<ul className='hidden md:flex items-center gap-6'>
+					{navLinks.map((link) => (
+						<li key={link.href}>
+							<Link
+								href={link.href}
+								className={`hover:text-black transition-colors ${
+									pathname === link.href
+										? 'border-t-2 border-black text-black font-medium pt-1.5'
+										: 'text-gray-700'
+								}`}>
+								{link.label}
+							</Link>
 						</li>
-						<li>
-							<a href='#'>About</a>
-						</li>
-						<li>
-							<a href='#'>Services</a>
-						</li>
-						<li>
-							<a href='#'>Contact</a>
-						</li>
+					))}
+				</ul>
+			</nav>
+
+			{/* Mobile Menu */}
+			{menuOpen && (
+				<div className='md:hidden bg-white shadow-md border-t'>
+					<ul className='flex flex-col gap-4 px-6 py-4'>
+						{navLinks.map((link) => (
+							<li key={link.href}>
+								<Link
+									href={link.href}
+									className={`block py-2 ${
+										pathname === link.href
+											? 'text-black font-medium'
+											: 'text-black/90'
+									}`}
+									onClick={() => setMenuOpen(false)}>
+									{link.label}
+								</Link>
+							</li>
+						))}
 					</ul>
-				</nav>
-			</header>
-		</>
+				</div>
+			)}
+		</header>
 	);
 };
+
 export default Navbar;

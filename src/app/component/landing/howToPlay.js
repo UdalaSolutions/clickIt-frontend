@@ -38,7 +38,7 @@ const steps = [
 
 const HowToPlay = () => {
 	return (
-		<section className='bg-[#F2F2F2] py-14 px-3 flex items-center justify-center flex-col'>
+		<section className='hidden md:flex bg-[#F2F2F2] py-14 px-3 items-center justify-center flex-col'>
 			<div className='text-center'>
 				<h2 className='font-bold text-[32px] leading-12'>How to Play</h2>
 				<p className='max-w-3xl mx-auto mt-4'>

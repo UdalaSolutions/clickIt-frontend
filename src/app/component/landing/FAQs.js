@@ -39,7 +39,7 @@ const FAQs = () => {
 	};
 
 	return (
-		<section className='relative py-16 bg-white'>
+		<section className='relative pt-4 pb-16 bg-white px-3.5 md:px-0'>
 			<div
 				className='
           relative
@@ -62,7 +62,9 @@ const FAQs = () => {
 
 				{/* FAQ content */}
 				<div className='relative z-20 w-full'>
-					<h2 className='text-[32px] font-bold text-center mb-6'>FAQs</h2>
+					<h2 className='text-2xl sm:text-[32px] font-bold text-center mb-6'>
+						FAQs
+					</h2>
 
 					<div className='space-y-4'>
 						{faqsData.map((faq, index) => {
@@ -74,13 +76,13 @@ const FAQs = () => {
 									<button
 										onClick={() => toggleFAQ(index)}
 										aria-expanded={isOpen}
-										className='w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors'>
-										<span className='font-medium text-gray-900 pr-4'>
+										className='w-full px-4 sm:px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors'>
+										<span className='text-sm sm:text-base font-medium text-[#1A1A1A] pr-4'>
 											{faq.question}
 										</span>
 										<Icon
 											icon='iconamoon:arrow-down-2'
-											className={`w-6 h-6 text-gray-600 flex-shrink-0 transition-transform duration-200 ${
+											className={`h-5 w-5 sm:w-6 sm:h-6 text-[#999999] flex-shrink-0 transition-transform duration-200 ${
 												isOpen ? 'rotate-180' : ''
 											}`}
 										/>
