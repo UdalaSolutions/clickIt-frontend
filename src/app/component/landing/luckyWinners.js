@@ -1,10 +1,11 @@
-import React from 'react';
 import { Icon } from '@iconify/react';
-import { winners } from '@/app/utils/utils';
+import { winners } from '../../utils/utils';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const LuckyWinners = () => {
 	return (
-		<section className='bg-white py-14 flex items-center justify-center flex-col px-3.5 md:px-0'>
+		<section className='bg-white py-14 flex items-center justify-center flex-col px-3.5 md:px-2'>
 			<div className='text-center'>
 				<h2 className='font-bold text-2xl sm:text-3xl md:text-4xl'>
 					Our lucky winners
@@ -14,15 +15,23 @@ const LuckyWinners = () => {
 				</p>
 			</div>
 
-			<div className='mt-10 w-full max-w-7xl PX-4'>
+			<div className='mt-10 w-full max-w-7xl px-4'>
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 					{winners.slice(0, 3).map((winner) => (
 						<div
 							key={winner.id}
 							className='bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100'>
-							{/* Video Placeholder */}
-							<div className='relative bg-[#D9D9D9] aspect-video flex items-center justify-center'>
-								<button className='w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform'>
+							{/* Placeholder Image */}
+							<div className='relative aspect-video bg-gray-200'>
+								<Image
+									src={winner.image || '/luckyWinners/winner2.svg'}
+									alt='Winner video thumbnail'
+									fill
+									className='object-cover'
+								/>
+
+								{/* Play button */}
+								<button className='absolute inset-0 m-auto w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform'>
 									<Icon
 										icon='carbon:play'
 										className='w-7 h-7 text-gray-700 ml-1'
@@ -50,9 +59,11 @@ const LuckyWinners = () => {
 
 				{/* See All Button */}
 				<div className='flex justify-center mt-8 smd:mt-10'>
-					<button className='bg-[#FAAA32] text-black font-semibold px-12 py-4 rounded-full transition-colors shadow-[0px_4px_0px_0px_#0B132A] flex items-center justify-center w-xs sm:w-sm mx-auto cursor-pointer'>
+					<Link
+						href='/lucky-winner'
+						className='bg-[#FAAA32] text-black font-semibold px-12 py-4 rounded-full transition-colors shadow-[0px_4px_0px_0px_#0B132A] flex items-center justify-center w-xs sm:w-sm mx-auto cursor-pointer'>
 						See all
-					</button>
+					</Link>
 				</div>
 			</div>
 		</section>

@@ -39,7 +39,7 @@ const FAQs = () => {
 	};
 
 	return (
-		<section className='relative pt-4 pb-16 bg-white px-3.5 md:px-0'>
+		<section className='relative pt-4 sm:pt-8 md:pt-12 pb-16 bg-white px-3.5 md:px-0'>
 			<div
 				className='
           relative
@@ -47,7 +47,7 @@ const FAQs = () => {
           flex items-center justify-center
           overflow-hidden
           max-w-3xl mx-auto bg-gradient-to-br from-[#0095FF4D] via-[#20377966] to-[#FAAA32]
-          py-8 rounded-3xl
+          py-8 rounded-3xl border-2 border-[#0B132A]
         '>
 				{/* Background overlay */}
 				<div

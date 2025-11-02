@@ -60,7 +60,7 @@ const ContactUsPage = () => {
 			<section className='w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-start'>
 				{/* Left column - copy & contact methods */}
 				<div className='px-2 lg:px-0'>
-					<h2 className='text-[32px] font-bold text-[#0B132A] mb-4 max-w-sm'>
+					<h2 className='text-[24px] sm:text-[32px] font-bold text-[#0B132A] mb-4 max-w-sm'>
 						Get in touch with our support team
 					</h2>
 
@@ -98,7 +98,7 @@ const ContactUsPage = () => {
 				</div>
 
 				{/* Right column - contact form */}
-				<div className='bg-[#F7F7F7] rounded-3xl p-6 md:p-8 shadow-sm'>
+				<div className='bg-[#F7F7F7] rounded-3xl pt-6 p-3 sm:p-6 md:p-8 shadow-sm'>
 					<form
 						onSubmit={handleSubmit}
 						className='space-y-4'>

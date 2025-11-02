@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
-import { navLinks, socialIcons } from '@/app/utils/utils';
+import Link from 'next/link';
+import { navLinks, socialIcons } from '../utils/utils';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -18,29 +19,21 @@ const Footer = () => {
 							{/* Dark promo card */}
 							<div className='relative bg-[#0B132A] rounded-2xl px-8 py-12 md:py-14 lg:py-16 text-center'>
 								{/* Decorative angled shapes (SVG) */}
-								<svg
-									className='absolute -top-6 right-8 w-28 h-28 opacity-20'
-									viewBox='0 0 100 100'
-									fill='none'
-									xmlns='http://www.w3.org/2000/svg'
-									aria-hidden>
-									<path
-										d='M0 80 L20 60 L40 80 L60 60 L80 80 L100 60 L100 100 L0 100 Z'
-										fill='#0d2742'
-									/>
-								</svg>
+								<Image
+									src='/footer2.svg'
+									width={200}
+									alt=''
+									height={200}
+									className='absolute -top-6 sm:top-0 right-3 w-[143px] h-[100px]'
+								/>
 
-								<svg
-									className='absolute -bottom-8 left-8 w-36 h-24 opacity-15'
-									viewBox='0 0 200 80'
-									fill='none'
-									xmlns='http://www.w3.org/2000/svg'
-									aria-hidden>
-									<polygon
-										points='0,80 40,40 80,80 120,40 160,80 200,40 200,80 0,80'
-										fill='#12304e'
-									/>
-								</svg>
+								<Image
+									src='/footer1.svg'
+									width={200}
+									alt=''
+									height={200}
+									className='absolute -bottom-6 sm:bottom-0 left-3  w-[143px] h-[100px]'
+								/>
 
 								{/* Content */}
 								<h2 className='text-2xl sm:text-[32px] leading-9 sm:leading-12 text-center font-bold  text-white max-w-md mx-auto'>
@@ -51,13 +44,16 @@ const Footer = () => {
 									keyword to our short code and get in on the next draw.
 								</p>
 
-								<div className='mt-8 flex items-center justify-center gap-4'>
+								<div className='mt-8 flex flex-col sm:flex-row items-center justify-center gap-4'>
+									<Link
+										href='/play-now'
+										className='bg-primary text-[#0B132A] flex items-center justify-center font-bold rounded-full py-2.5 px-10 hover:scale-[1.02] transition-transform '>
+										Play via website
+									</Link>
 									<button
-										className='inline-flex items-center gap-3 bg-[#FAAA32]  text-[#081726] font-semibold py-3 px-6 rounded-full shadow-2xl hover:scale-[1.02] transition-transform '
+										className='inline-flex items-center gap-3   bg-[#081726] font-semibold py-2.5 px-11 rounded-full shadow-2xl hover:scale-[1.02] transition-transform border border-primary text-primary cursor-pointer'
 										aria-label='SMS CTA'>
-										<span className='text-base md:text-2xl/8 font-bold '>
-											SMS ‘CW’ to ‘52011’
-										</span>
+										<span className='text-base  font-bold '>Play via SMS</span>
 									</button>
 								</div>
 							</div>
@@ -66,7 +62,7 @@ const Footer = () => {
 				</div>
 
 				{/* Footer main area (pushed down to make room for overlapping promo) */}
-				<div className='pt-28 sm:pt-40 md:pt-44 pb-12'>
+				<div className='pt-42 md:pt-44 pb-12'>
 					<div className='max-w-6xl mx-auto px-6'>
 						<div className='flex flex-col md:flex-row md:items-start md:justify-between gap-10'>
 							{/* Brand */}
@@ -86,7 +82,7 @@ const Footer = () => {
 
 							{/* Nav links */}
 							<nav className=''>
-								<ul className='flex flex-col sm:flex-row gap-4 sm:gap-8 text-gray-300'>
+								<ul className='flex flex-row gap-4 sm:gap-8 text-gray-300'>
 									{navLinks.map((link) => (
 										<li key={link.href}>
 											<a
@@ -118,14 +114,14 @@ const Footer = () => {
 								))}
 							</div>
 							<div className='flex items-center gap-6'>
-								<div className='hidden sm:flex items-center gap-3'>
+								<div className='flex items-center gap-3'>
 									<a
-										href='#privacy'
+										href='/privacy'
 										className='text-sm text-[#3D3D3D] '>
 										Privacy policy
 									</a>
 									<a
-										href='#terms'
+										href='/terms'
 										className='text-sm text-[#3D3D3D] '>
 										Terms
 									</a>

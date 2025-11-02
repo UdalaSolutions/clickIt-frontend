@@ -22,3 +22,11 @@ body {
 	background-color: white !important;
 	color: var(--foreground);
 }
+
+.howto-bg {
+	background-image: url('/how-it-works.svg');
+	background-size: cover;
+	background-position: top center;
+	clip-path: polygon(0 0, 50% 7%, 100% 0, 100% 100%, 0 100%);
+	height: 100%;
+}

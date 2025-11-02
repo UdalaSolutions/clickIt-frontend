@@ -1,5 +1,6 @@
-import { winners } from '@/app/utils/utils';
+import { winners } from '../utils/utils';
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 const LuckyWinnersPage = () => {
 	return (
@@ -14,9 +15,17 @@ const LuckyWinnersPage = () => {
 						<div
 							key={winner.id}
 							className='bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100'>
-							{/* Video Placeholder */}
-							<div className='relative bg-[#D9D9D9] aspect-video flex items-center justify-center'>
-								<button className='w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform'>
+							{/* Thumbnail / Placeholder */}
+							<div className='relative aspect-video bg-gray-200'>
+								<Image
+									src={winner.image || '/luckyWinners/winner1.svg'}
+									alt='Winner video thumbnail'
+									fill
+									className='object-cover'
+								/>
+
+								{/* Play button */}
+								<button className='absolute inset-0 m-auto w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform'>
 									<Icon
 										icon='carbon:play'
 										className='w-7 h-7 text-gray-700 ml-1'
@@ -52,4 +61,5 @@ const LuckyWinnersPage = () => {
 		</section>
 	);
 };
+
 export default LuckyWinnersPage;
