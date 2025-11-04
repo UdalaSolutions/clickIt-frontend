@@ -49,16 +49,17 @@ const Hero = () => {
 			</div>
 
 			{/* Hero Illustration - Removed bottom margin */}
-			<div className='relative w-[340px] h-[240px] sm:w-[460px] sm:h-[340px] md:w-[600px] md:h-[415px] mt-10 md:mt-14 '>
+			<div className='relative w-[340px] h-[240px] sm:w-[460px] sm:h-[340px] md:w-[600px] md:h-[415px] mt-10 md:mt-14'>
 				<Image
 					src='/hero-image.svg'
 					alt='Hero Image'
 					fill
-					className='object-contain'
 					priority
-					// style={{ inset: '10px' }}
+					sizes='(max-width: 640px) 340px, (max-width: 768px) 460px, 600px'
+					className='object-contain'
 				/>
 			</div>
+
 			{/* Background Star - Full Width & Height */}
 			<div className='absolute bottom-0 left-0 w-full -z-10 pointer-events-none'>
 				<Image

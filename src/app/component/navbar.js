@@ -33,14 +33,20 @@ const Navbar = () => {
 			}`}>
 			<nav className='flex items-center justify-between px-6 md:px-10 py-4'>
 				{/* Logo */}
-				<Link href='/'>
-					<Image
-						src='/clickit-logo.svg'
-						alt='Logo'
-						width={163}
-						height={50}
-						className='cursor-pointer w-[120px] h-10 md:w-[163px] md:h-12.5'
-					/>
+				<Link
+					href='/'
+					className='block'>
+					<div className='w-[120px] md:w-[163px]'>
+						<Image
+							src='/clickit-logo.svg'
+							alt='Logo'
+							width={163}
+							height={50}
+							sizes='(max-width: 768px) 120px, 163px'
+							priority
+							className='w-full h-auto'
+						/>
+					</div>
 				</Link>
 
 				{/* Hamburger Icon */}
