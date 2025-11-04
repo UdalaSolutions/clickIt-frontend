@@ -1,7 +1,13 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import PlaysmsModal from '../modal/playsms';
 
 const Hero = () => {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<section className='relative mt-32 sm:mt-38 flex flex-col items-center justify-center text-center px-3.5 md:px-0 overflow-hidden'>
 			{/* Text Content */}
@@ -34,7 +40,9 @@ const Hero = () => {
 						Play via website
 					</Link>
 
-					<div className='text-primary border border-primary bg-white py-3 px-6 rounded-full flex items-center gap-2.5 font-bold justify-center min-w-[294px] md:min-w-[300px] cursor-pointer'>
+					<div
+						className='text-primary border border-primary bg-white py-3 px-6 rounded-full flex items-center gap-2.5 font-bold justify-center min-w-[294px] md:min-w-[300px] cursor-pointer'
+						onClick={() => setIsOpen(true)}>
 						Play via SMS
 					</div>
 				</div>
@@ -48,7 +56,7 @@ const Hero = () => {
 					fill
 					className='object-contain'
 					priority
-					style={{ inset: '10px' }}
+					// style={{ inset: '10px' }}
 				/>
 			</div>
 			{/* Background Star - Full Width & Height */}
@@ -58,10 +66,22 @@ const Hero = () => {
 					alt='Hero background'
 					width={2000}
 					height={800}
-					className='w-full h-auto opacity-90'
+					className='w-full sm:h-auto opacity-90 h-[350px]'
 					priority
 				/>
 			</div>
+			{/* Modal Overlay */}
+			{isOpen && (
+				<div
+					onClick={() => setIsOpen(false)}
+					className='fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50'>
+					<div
+						onClick={(e) => e.stopPropagation()}
+						className='animate-modalFadeScale'>
+						<PlaysmsModal closeModal={() => setIsOpen(false)} />
+					</div>
+				</div>
+			)}
 		</section>
 	);
 };

@@ -39,7 +39,7 @@ const FAQs = () => {
 	};
 
 	return (
-		<section className='relative pt-4 sm:pt-8 md:pt-12 pb-16 bg-white px-3.5 md:px-0'>
+		<section className='relative pt-4 sm:pt-8 md:pt-12 pb-16 bg-white px-5.5 md:px-0'>
 			<div
 				className='
           relative
@@ -54,7 +54,7 @@ const FAQs = () => {
 					className='absolute inset-0 z-10 pointer-events-none'
 					style={{
 						backgroundImage: 'url(/background-star.svg)',
-						backgroundSize: '80%',
+						backgroundSize: '100%',
 						backgroundPosition: 'center',
 						// backgroundRepeat: 'repeat',
 					}}

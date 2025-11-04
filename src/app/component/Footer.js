@@ -1,10 +1,15 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 import { navLinks, socialIcons } from '../utils/utils';
+import PlaysmsModal from './modal/playsms';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
+	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<>
@@ -24,7 +29,7 @@ const Footer = () => {
 									width={200}
 									alt=''
 									height={200}
-									className='absolute -top-6 sm:top-0 right-3 w-[143px] h-[100px]'
+									className='absolute -top-8 sm:-top-16 right-3 w-[143px] h-[100px] sm:h-[200px] sm:w-[200px]'
 								/>
 
 								<Image
@@ -32,7 +37,7 @@ const Footer = () => {
 									width={200}
 									alt=''
 									height={200}
-									className='absolute -bottom-6 sm:bottom-0 left-3  w-[143px] h-[100px]'
+									className='absolute -bottom-8 sm:bottom-0  left-3  w-[143px] h-[100px]sm:h-[200px] sm:w-[200px]'
 								/>
 
 								{/* Content */}
@@ -52,7 +57,8 @@ const Footer = () => {
 									</Link>
 									<button
 										className='inline-flex items-center gap-3   bg-[#081726] font-semibold py-2.5 px-11 rounded-full shadow-2xl hover:scale-[1.02] transition-transform border border-primary text-primary cursor-pointer'
-										aria-label='SMS CTA'>
+										aria-label='SMS CTA'
+										onClick={() => setIsOpen(true)}>
 										<span className='text-base  font-bold '>Play via SMS</span>
 									</button>
 								</div>
@@ -133,6 +139,18 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
+				{/* Modal */}
+				{isOpen && (
+					<div
+						onClick={() => setIsOpen(false)}
+						className='fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50'>
+						<div
+							onClick={(e) => e.stopPropagation()}
+							className='animate-modalFadeScale'>
+							<PlaysmsModal closeModal={() => setIsOpen(false)} />
+						</div>
+					</div>
+				)}
 			</footer>
 		</>
 	);

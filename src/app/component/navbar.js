@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -9,10 +9,28 @@ import { navLinks } from '../utils/utils';
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
 	const pathname = usePathname();
 
+	// Detect scroll
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 10) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
 	return (
-		<header className='fixed top-0 left-0 right-0 bg-white shadow-sm z-50'>
+		<header
+			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+				scrolled ? 'bg-white shadow-md' : 'bg-transparent'
+			}`}>
 			<nav className='flex items-center justify-between px-6 md:px-10 py-4'>
 				{/* Logo */}
 				<Link href='/'>
@@ -21,7 +39,7 @@ const Navbar = () => {
 						alt='Logo'
 						width={163}
 						height={50}
-						className='cursor-pointer w-[130px] h-10 md:w-[163px] md:h-12.5'
+						className='cursor-pointer w-[120px] h-10 md:w-[163px] md:h-12.5'
 					/>
 				</Link>
 
@@ -44,7 +62,7 @@ const Navbar = () => {
 								href={link.href}
 								className={`hover:text-black transition-colors ${
 									pathname === link.href
-										? 'border-t-2 border-black text-black font-medium pt-1.5'
+										? 'border-b-2 border-black text-black font-medium pb-1'
 										: 'text-gray-700'
 								}`}>
 								{link.label}

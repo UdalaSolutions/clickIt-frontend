@@ -18,6 +18,10 @@
 	--color-primary: var(--primary);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: white !important;
 	color: var(--foreground);
@@ -29,4 +33,27 @@ body {
 	background-position: top center;
 	clip-path: polygon(0 0, 50% 7%, 100% 0, 100% 100%, 0 100%);
 	height: 100%;
+}
+
+@layer utilities {
+	@keyframes modalFadeScale {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.animate-modalFadeScale {
+		animation: modalFadeScale 0.25s ease-out forwards;
+	}
+}
+
+@media (min-width: 758px) {
+	.about-us {
+		background-size: 40% !important;
+	}
 }
