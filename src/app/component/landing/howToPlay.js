@@ -21,10 +21,10 @@ const HowToPlay = () => {
 					{steps.map((step) => (
 						<article
 							key={step.id}
-							className={`flex flex-col bg-white rounded-xl p-4 text-left border-2 ${step.borderColor}`}
+							className={`group flex flex-col bg-white rounded-xl p-4 text-left border-2 transition-all duration-300 ease-in-out ${step.borderColor}`}
 							aria-labelledby={`howto-step-${step.id}`}>
 							<h1
-								className={`${step.textColor} font-semibold text-6 leading-8 sm:text-[32px] sm:leading-12`}>
+								className={`${step.textColor} font-semibold text-6 leading-8 sm:text-[32px] sm:leading-12 transition-all duration-300 ease-in-out`}>
 								{step.id}
 							</h1>
 

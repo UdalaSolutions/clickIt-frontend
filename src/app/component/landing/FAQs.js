@@ -72,11 +72,11 @@ const FAQs = () => {
 							return (
 								<div
 									key={index}
-									className='bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden'>
+									className='bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden cursor-pointer'>
 									<button
 										onClick={() => toggleFAQ(index)}
 										aria-expanded={isOpen}
-										className='w-full px-4 sm:px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors'>
+										className='w-full px-4 sm:px-6 py-4 flex items-center justify-between text-left transition-colors'>
 										<span className='text-sm sm:text-base font-medium text-[#1A1A1A] pr-4'>
 											{faq.question}
 										</span>
@@ -92,7 +92,7 @@ const FAQs = () => {
 										className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
 											isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
 										}`}>
-										<div className='px-6 pb-4 pt-2 text-gray-600 border-t border-gray-100'>
+										<div className='px-6 pb-4 pt-2 text-gray-600 '>
 											{faq.answer}
 										</div>
 									</div>

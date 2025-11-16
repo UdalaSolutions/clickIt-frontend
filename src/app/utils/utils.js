@@ -84,36 +84,33 @@ export const steps = [
 		title: 'Text the keyword',
 		description:
 			'Text the unique keyword to our short code to begin your journey to winning big with Click‑it.',
-		borderColor: 'border-[#FAAA32] ',
+		borderColor: 'border-[#F9A01A] hover:bg-[#F9A01A]',
 		textColor:
-			'bg-[linear-gradient(180deg,#FAAA31_30%,#EBEFFA_100%)] bg-clip-text text-transparent',
+			'bg-[linear-gradient(180deg,#FAAA31_30%,#EBEFFA_100%)] bg-clip-text text-transparent group-hover:bg-[linear-gradient(180deg,#FFFFFF_30%,rgba(255,255,255,0.1)_100%)]',
 	},
 	{
 		id: 2,
 		title: 'Confirm your entry',
-		description:
-			'You’ll receive a confirmation message asking if you’d like to join the Click-It Draw.',
-		borderColor: 'border-[#0095FF] ',
+		description: `You'll receive a confirmation message asking if you'd like to join the Click-It Draw.`,
+		borderColor: 'border-[#0092FA] hover:bg-[#0092FA]',
 		textColor:
-			'bg-[linear-gradient(180deg,#0095FF_30%,#EBEFFA_100%)] bg-clip-text text-transparent',
+			'bg-[linear-gradient(180deg,#0095FF_30%,#EBEFFA_100%)] bg-clip-text text-transparent group-hover:bg-[linear-gradient(180deg,#FFFFFF_30%,rgba(255,255,255,0.6)_100%)]',
 	},
 	{
 		id: 3,
 		title: 'Choose a plan',
-		description:
-			'Select and confirm your preferred subscription plan - It’s quick and secure.',
-		borderColor: 'border-[#D84727]',
+		description: `Select and confirm your preferred subscription plan - It's quick and secure.`,
+		borderColor: 'border-[#F05938] hover:bg-[#F05938]',
 		textColor:
-			'bg-[linear-gradient(180deg,#D84727_30%,#EBEFFA_100%)] bg-clip-text text-transparent',
+			'bg-[linear-gradient(180deg,#D84727_30%,#EBEFFA_100%)] bg-clip-text text-transparent group-hover:bg-[linear-gradient(180deg,#FFFFFF_30%,rgba(255,255,255,0.6)_100%)]',
 	},
 	{
 		id: 4,
 		title: 'Wait for draw day',
-		description:
-			'Once confirmed, you’re instantly entered into our draws for a chance to win exciting cash prizes!',
-		borderColor: 'border-[#3D3D3D]',
+		description: `Once confirmed, you're instantly entered into our draws for a chance to win exciting cash prizes!`,
+		borderColor: 'border-[#00BFA5] hover:bg-[#00BFA5]',
 		textColor:
-			'bg-[linear-gradient(180deg,#0B132A_30%,#EBEFFA_100%)] bg-clip-text text-transparent',
+			'bg-[linear-gradient(180deg,#0B132A_30%,#EBEFFA_100%)] bg-clip-text text-transparent group-hover:bg-[linear-gradient(180deg,#FFFFFF_30%,rgba(255,255,255,0.6)_100%)]',
 	},
 ];
 
