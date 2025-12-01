@@ -30,16 +30,15 @@ const Navbar = () => {
 			<nav className='flex items-center justify-between px-6 md:px-10 py-4'>
 				{/* Logo */}
 				<Link href='/'>
-					<div className='w-[120px] md:w-[163px]'>
-						<Image
-							src='/clickit-logo.svg'
-							alt='Logo'
-							width={163}
-							height={50}
-							className='w-full h-auto'
-							priority
-						/>
-					</div>
+					<Image
+						src='/clickit-logo.svg'
+						alt='Logo'
+						width={0}
+						height={0}
+						sizes='100vw'
+						className='w-[120px] md:w-[163px] h-auto'
+						priority
+					/>
 				</Link>
 
 				{/* Mobile Toggle */}
