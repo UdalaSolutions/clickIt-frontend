@@ -52,14 +52,15 @@ const Footer = () => {
 								<div className='mt-8 flex flex-col sm:flex-row items-center justify-center gap-4'>
 									<Link
 										href='/play-now'
-										className='bg-primary text-[#0B132A] flex items-center justify-center font-bold rounded-full py-2.5 px-10 hover:scale-[1.02] transition-transform '>
+										className='w-full sm:w-auto bg-primary text-[#0B132A] flex items-center justify-center font-bold rounded-full py-2.5 px-10 hover:scale-[1.02] transition-transform'>
 										Play via website
 									</Link>
+
 									<button
-										className='inline-flex items-center gap-3   bg-[#081726] font-semibold py-2.5 px-11 rounded-full shadow-2xl hover:scale-[1.02] transition-transform border border-primary text-primary cursor-pointer'
+										className='w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#081726] font-semibold py-2.5 px-10 rounded-full shadow-2xl hover:scale-[1.02] transition-transform border border-primary text-primary cursor-pointer'
 										aria-label='SMS CTA'
 										onClick={() => setIsOpen(true)}>
-										<span className='text-base  font-bold '>Play via SMS</span>
+										<span className='text-base font-bold'>Play via SMS</span>
 									</button>
 								</div>
 							</div>
@@ -103,7 +104,7 @@ const Footer = () => {
 						</div>
 
 						{/* Bottom white pill row with legal links (as in the design) */}
-						<div className='bg-[#F2F2F2] rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4  mt-12'>
+						<div className='bg-[#F2F2F2] rounded-xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-4  mt-12'>
 							<div className='flex items-center gap-2.5'>
 								{/* Use Iconify icons inside large yellow circles */}
 								{socialIcons.map((s) => (
