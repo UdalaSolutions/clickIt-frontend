@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './component/navbar';
-import Footer from './component/Footer';
+import ConditionalFooter from './component/ConditionalFooter';
 
 const interSans = Inter({
 	variable: '--font-inter',
@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
 		<html lang='en'>
 			<body className={`${interSans.className} antialiased`}>
 				<Navbar />
-				{children}
-				<Footer />
+				<div className='page-fade'>{children}</div>
+				<ConditionalFooter />
 			</body>
 		</html>
 	);

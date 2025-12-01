@@ -167,10 +167,10 @@ const ContactUsPage = () => {
 							/>
 						</label>
 
-						<div className='pt-2'>
+						<div className='pt-2 pb-6 md:pb-0'>
 							<button
 								type='submit'
-								className='bg-[#FAAA32] text-[#081726] font-semibold py-3 px-8 rounded-full shadow-[0px_4px_0px_0px_#0B132A] transition-transform'>
+								className='w-full md:w-max bg-[#FAAA32] text-[#081726] font-semibold py-3 px-8 rounded-full shadow-[0px_4px_0px_0px_#0B132A] transition-transform'>
 								Send message
 							</button>
 						</div>

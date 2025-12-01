@@ -11,14 +11,14 @@ const SuccessPage = () => {
 
 	return (
 		<div className='min-h-screen bg-white flex items-center justify-center p-4 mt-10'>
-			<div className='bg-[#FCFCFC] rounded-xl p-8 w-full max-w-[460px] shadow-[0px_0px_2px_2px_#9CC6D31A] flex items-center flex-col'>
+			<div className='bg-[#FCFCFC] rounded-xl p-8 w-full max-w-[460px] shadow-[0px_0px_2px_2px_#9CC6D31A] flex items-center flex-col gap-2'>
 				<div className='mb-6 text-6xl'>🎉</div>
 
 				<h1 className='text-3xl font-bold mb-4'>Success!</h1>
 
 				<p className='text-gray-600 mb-8 leading-relaxed text-center'>
-					Your entry has been received. We&apos;ve sent a confirmation SMS to
-					your phone number with your subscription details and draw date.
+					Your entry has been received. We’ve sent a confirmation SMS to your
+					phone number with your subscription details and draw date.
 				</p>
 
 				<button

@@ -76,6 +76,48 @@ export const winners = [
 		amount: '₦500,000',
 		image: '/luckyWinners/winner4.svg',
 	},
+	{
+		id: 10,
+		phone: '+234 802 **** 629',
+		date: 'Aug 8, 2025',
+		amount: '₦500,000',
+		image: '/luckyWinners/winner3.svg',
+	},
+	{
+		id: 11,
+		phone: '+234 802 **** 629',
+		date: 'Aug 8, 2025',
+		amount: '₦500,000',
+		image: '/luckyWinners/winner4.svg',
+	},
+	{
+		id: 12,
+		phone: '+234 802 **** 629',
+		date: 'Aug 8, 2025',
+		amount: '₦500,000',
+		image: '/luckyWinners/winner5.svg',
+	},
+	{
+		id: 13,
+		phone: '+234 802 **** 629',
+		date: 'Aug 8, 2025',
+		amount: '₦500,000',
+		image: '/luckyWinners/winner6.svg',
+	},
+	{
+		id: 14,
+		phone: '+234 802 **** 629',
+		date: 'Aug 8, 2025',
+		amount: '₦500,000',
+		image: '/luckyWinners/winner7.svg',
+	},
+	{
+		id: 15,
+		phone: '+234 802 **** 629',
+		date: 'Aug 8, 2025',
+		amount: '₦500,000',
+		image: '/luckyWinners/winner8.svg',
+	},
 ];
 
 export const steps = [
@@ -110,7 +152,7 @@ export const steps = [
 		description: `Once confirmed, you're instantly entered into our draws for a chance to win exciting cash prizes!`,
 		borderColor: 'border-[#00BFA5] hover:bg-[#00BFA5]',
 		textColor:
-			'bg-[linear-gradient(180deg,#0B132A_30%,#EBEFFA_100%)] bg-clip-text text-transparent group-hover:bg-[linear-gradient(180deg,#FFFFFF_30%,rgba(255,255,255,0.6)_100%)]',
+			'bg-[linear-gradient(180deg,#00BFA5_30%,#EBEFFA_100%)] bg-clip-text text-transparent group-hover:bg-[linear-gradient(180deg,#FFFFFF_30%,rgba(255,255,255,0.6)_100%)]',
 	},
 ];
 
@@ -124,7 +166,7 @@ export const cards = [
 	{
 		title: 'Mission',
 		body: 'To create a simple, inclusive, and transparent lottery system that rewards everyday telecom users for their participation and loyalty.',
-		icon: 'mdi:target',
+		icon: 'lucide:goal',
 	},
 	{
 		title: 'Vision',

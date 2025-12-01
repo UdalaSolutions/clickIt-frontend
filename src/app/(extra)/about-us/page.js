@@ -52,13 +52,13 @@ export default function AboutPage() {
 				{cards.map((c) => (
 					<article
 						key={c.title}
-						className='rounded-xl border border-[#B3B3B3] p-6 bg-white'>
+						className='rounded-xl border-[0.5px] border-[#B3B3B3] p-6 bg-white group hover:bg-[#faaa32] hover:border-[#faaa32]'>
 						<div className='flex items-start gap-4 flex-col'>
 							<div className='flex-shrink-0'>
-								<div className='w-12 h-12 rounded-full bg-[#FFFAF0] flex items-center justify-center border border-[#FDE3B6]'>
+								<div className='h-12.5 w-12.5 rounded-lg bg-[#FCFCF7] flex items-center justify-center group-hover:bg-white'>
 									<Icon
 										icon={c.icon}
-										className='text-[#FAAA32] w-6 h-6'
+										className='w-8 h-8 text-[#FAAA32]'
 									/>
 								</div>
 							</div>

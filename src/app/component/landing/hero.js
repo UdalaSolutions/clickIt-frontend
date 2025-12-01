@@ -57,13 +57,13 @@ const Hero = () => {
 			</div>
 
 			{/* Hero Illustration - Removed bottom margin */}
-			<div className='relative w-[340px] h-[240px] sm:w-[460px] sm:h-[340px] md:w-[600px] md:h-[415px] mt-10 md:mt-14'>
+			<div className='relative w-[340px] h-[240px] sm:w-[460px] sm:h-[340px] md:w-[600px] md:h-[500px] mt-10 md:mt-14'>
 				<Image
 					src='/hero-image.svg'
 					alt='Hero Image'
 					fill
 					priority
-					sizes='(max-width: 640px) 340px, (max-width: 768px) 460px, 600px'
+					sizes='(max-width: 640px) 340px, (max-width: 800px) 460px, 600px'
 					className='object-contain'
 				/>
 			</div>
@@ -75,7 +75,7 @@ const Hero = () => {
 					alt='Hero background'
 					width={2000}
 					height={800}
-					className='w-full sm:h-auto opacity-90 h-[350px]'
+					className='w-full sm:h-auto opacity-90 h-[350px] md:h-full'
 					priority
 				/>
 			</div>

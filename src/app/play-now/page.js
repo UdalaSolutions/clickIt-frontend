@@ -62,12 +62,12 @@ const LotteryForm = () => {
 							</label>
 
 							<label className='flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition bg-white'>
-								<span className='font-medium'>₦200/week</span>
+								<span className='font-medium'>₦150/week</span>
 								<input
 									type='radio'
 									name='plan'
-									value='200'
-									checked={plan === '200'}
+									value='150'
+									checked={plan === '150'}
 									onChange={(e) => setPlan(e.target.value)}
 									className='w-5 h-5 accent-black'
 								/>
