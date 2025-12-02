@@ -25,21 +25,34 @@ const Navbar = () => {
 	return (
 		<header
 			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-				scrolled ? 'bg-white shadow-md' : 'bg-transparent'
+				scrolled ? 'bg-white md:shadow-md' : 'bg-transparent'
 			}`}>
 			<nav className='flex items-center justify-between px-6 md:px-10 py-4'>
-				{/* Logo */}
-				<Link href='/'>
-					<Image
-						src='/clickit-logo.svg'
-						alt='Logo'
-						width={0}
-						height={0}
-						sizes='100vw'
-						className='w-[120px] md:w-[163px] h-auto'
-						priority
-					/>
-				</Link>
+				<div>
+					{/* Logo */}
+					<Link href='/'>
+						<Image
+							src='/click-it-mobile.svg'
+							alt='Logo'
+							width={130}
+							height={40}
+							className='md:hidden'
+							priority
+							quality={100}
+						/>
+					</Link>
+					<Link href='/'>
+						<Image
+							src='/clickit-logo.svg'
+							alt='Logo'
+							width={163}
+							height={50}
+							className='hidden md:flex'
+							priority
+							quality={100}
+						/>
+					</Link>
+				</div>
 
 				{/* Mobile Toggle */}
 				<button
