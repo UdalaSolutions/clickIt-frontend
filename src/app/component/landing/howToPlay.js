@@ -5,7 +5,7 @@ const HowToPlay = () => {
 		<section
 			className='	
 				pt-40 pb-20 px-3 
-				items-center justify-center flex-col howto-bg -mt-36 md:-mt-20 lg:-mt-28 xl:-mt-32
+				items-center justify-center flex-col howto-bg -mt-36 md:-mt-20 lg:-mt-28 xl:-mt-46 h-max
 			'>
 			<div className='text-center'>
 				<h2 className='font-bold text-[24px] leading-8 sm:text-[32px] sm:leading-12'>

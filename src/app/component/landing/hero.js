@@ -57,7 +57,7 @@ const Hero = () => {
 			</div>
 
 			{/* Hero Illustration - Removed bottom margin */}
-			<div className='relative w-[340px] h-[240px] sm:w-[460px] sm:h-[340px] md:w-[600px] md:h-[500px] mt-10 md:mt-14'>
+			<div className='relative w-[340px] h-[240px] sm:w-[460px] sm:h-[340px] md:w-[600px] md:h-[500px]  mt-10 md:mt-14 bottom-0 mb-0'>
 				<Image
 					src='/hero-image.svg'
 					alt='Hero Image'
@@ -75,10 +75,11 @@ const Hero = () => {
 					alt='Hero background'
 					width={2000}
 					height={800}
-					className='w-full sm:h-auto opacity-90 h-[350px] md:h-full'
+					className='w-full sm:h-auto opacity-90 h-[350px] md:h-full xl:h-[750px]'
 					priority
 				/>
 			</div>
+
 			{/* Modal Overlay */}
 			{isOpen && (
 				<div
