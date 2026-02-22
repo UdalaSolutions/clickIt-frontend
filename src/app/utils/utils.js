@@ -12,6 +12,243 @@ export const socialIcons = [
 	{ href: '#linkedin', icon: 'mdi:linkedin', aria: 'LinkedIn' },
 ];
 
+export const ALL_QUESTIONS = [
+	// Set A
+	{
+		category: 'Entertainment',
+		question: 'Which Nigerian artist is known as the "Afrobeats King"?',
+		options: ['Wizkid', 'Davido', 'Burna Boy', 'Tekno'],
+		answer: 'Burna Boy',
+	},
+	{
+		category: 'History',
+		question: 'In what year did Nigeria gain independence?',
+		options: ['1957', '1960', '1963', '1965'],
+		answer: '1960',
+	},
+	{
+		category: 'Geography',
+		question: 'Which state is known as the "Center of Excellence" in Nigeria?',
+		options: ['Abuja', 'Kano', 'Lagos', 'Rivers'],
+		answer: 'Lagos',
+	},
+	{
+		category: 'Sports',
+		question: "Who is Nigeria's all-time top scorer in football?",
+		options: [
+			'Jay-Jay Okocha',
+			'Rashidi Yekini',
+			'Nwankwo Kanu',
+			'Obafemi Martins',
+		],
+		answer: 'Rashidi Yekini',
+	},
+	{
+		category: 'Culture',
+		question: 'What is the most widely spoken local language in Nigeria?',
+		options: ['Igbo', 'Yoruba', 'Hausa', 'Fulani'],
+		answer: 'Hausa',
+	},
+
+	// Set B
+	{
+		category: 'Entertainment',
+		question:
+			'Which Nollywood movie was the first Nigerian film to hit 1 billion Naira at the box office?',
+		options: ['The Wedding Party', 'Lionheart', 'King of Boys', 'Sugar Rush'],
+		answer: 'The Wedding Party',
+	},
+	{
+		category: 'Politics',
+		question:
+			'Who was the first President of Nigeria after the return to democracy in 1999?',
+		options: [
+			'Goodluck Jonathan',
+			"Umaru Yar'Adua",
+			'Olusegun Obasanjo',
+			'Ernest Shonekan',
+		],
+		answer: 'Olusegun Obasanjo',
+	},
+	{
+		category: 'Geography',
+		question: 'What is the largest city by population in Nigeria?',
+		options: ['Abuja', 'Kano', 'Lagos', 'Ibadan'],
+		answer: 'Lagos',
+	},
+	{
+		category: 'Food',
+		question: 'Which Nigerian soup is made primarily from ground melon seeds?',
+		options: ['Egusi soup', 'Ogbono soup', 'Edikaikong', 'Banga soup'],
+		answer: 'Egusi soup',
+	},
+	{
+		category: 'Sports',
+		question:
+			"In which year did Nigeria's Super Eagles win the Africa Cup of Nations?",
+		options: ['1990', '1994', '1998', '2002'],
+		answer: '1994',
+	},
+
+	// Set C
+	{
+		category: 'Entertainment',
+		question: 'Which Nigerian singer released the hit song "Johnny"?',
+		options: ['Tiwa Savage', 'Yemi Alade', 'Simi', 'Omawumi'],
+		answer: 'Yemi Alade',
+	},
+	{
+		category: 'History',
+		question:
+			'What was the name of the civil war fought in Nigeria between 1967 and 1970?',
+		options: [
+			'Lagos War',
+			'Biafra War',
+			'Niger Delta War',
+			'Northern Conflict',
+		],
+		answer: 'Biafra War',
+	},
+	{
+		category: 'Business',
+		question: 'Which Nigerian billionaire founded Dangote Group?',
+		options: ['Mike Adenuga', 'Aliko Dangote', 'Tony Elumelu', 'Femi Otedola'],
+		answer: 'Aliko Dangote',
+	},
+	{
+		category: 'Culture',
+		question: 'The Osun-Osogbo festival is celebrated in which Nigerian state?',
+		options: ['Oyo', 'Ekiti', 'Osun', 'Ondo'],
+		answer: 'Osun',
+	},
+	{
+		category: 'Geography',
+		question: 'What is the longest river that runs through Nigeria?',
+		options: ['Benue River', 'Cross River', 'River Niger', 'Kaduna River'],
+		answer: 'River Niger',
+	},
+
+	// Set D
+	{
+		category: 'Entertainment',
+		question: 'Which Nigerian comedian is known as "AY"?',
+		options: ['Ayo Makun', 'Alibek Cole', 'Basketmouth', 'Bovi Ugboma'],
+		answer: 'Ayo Makun',
+	},
+	{
+		category: 'Politics',
+		question: "Who was Nigeria's first military head of state?",
+		options: [
+			'Yakubu Gowon',
+			'Aguiyi-Ironsi',
+			'Murtala Mohammed',
+			'Ibrahim Babangida',
+		],
+		answer: 'Aguiyi-Ironsi',
+	},
+	{
+		category: 'Food',
+		question: 'Suya originates from which part of Nigeria?',
+		options: ['South-West', 'South-East', 'North', 'South-South'],
+		answer: 'North',
+	},
+	{
+		category: 'Science',
+		question: 'Which Nigerian university is the oldest in the country?',
+		options: [
+			'University of Lagos',
+			'University of Nigeria Nsukka',
+			'University of Ibadan',
+			'Obafemi Awolowo University',
+		],
+		answer: 'University of Ibadan',
+	},
+	{
+		category: 'Culture',
+		question:
+			'The New Yam Festival is predominantly celebrated by which Nigerian ethnic group?',
+		options: ['Yoruba', 'Hausa', 'Igbo', 'Ijaw'],
+		answer: 'Igbo',
+	},
+
+	// Set E
+	{
+		category: 'Entertainment',
+		question:
+			'Which Nigerian artist won the Grammy for Best Global Music Album in 2021?',
+		options: ['Wizkid', 'Davido', 'Burna Boy', 'Fela Kuti'],
+		answer: 'Burna Boy',
+	},
+	{
+		category: 'History',
+		question:
+			'The Benin Kingdom is located in present-day which Nigerian state?',
+		options: ['Delta', 'Edo', 'Ondo', 'Bayelsa'],
+		answer: 'Edo',
+	},
+	{
+		category: 'Business',
+		question: 'What does GTBank stand for?',
+		options: [
+			'Great Trust Bank',
+			'Guaranty Trust Bank',
+			'General Trade Bank',
+			'Grand Treasury Bank',
+		],
+		answer: 'Guaranty Trust Bank',
+	},
+	{
+		category: 'Culture',
+		question: 'The Eyo Festival is traditional to which Nigerian city?',
+		options: ['Ibadan', 'Enugu', 'Lagos', 'Calabar'],
+		answer: 'Lagos',
+	},
+	{
+		category: 'Geography',
+		question: 'Nigeria shares a border with how many countries?',
+		options: ['3', '4', '5', '6'],
+		answer: '4',
+	},
+
+	// Set F
+	{
+		category: 'Entertainment',
+		question: 'Who is known as the "Afrobeat Pioneer" from Nigeria?',
+		options: ['King Sunny Ade', 'Fela Kuti', 'Ebenezer Obey', 'Orlando Julius'],
+		answer: 'Fela Kuti',
+	},
+	{
+		category: 'Sports',
+		question:
+			'Which Nigerian footballer won the CAF African Player of the Year award in 2004?',
+		options: [
+			'Jay-Jay Okocha',
+			'Nwankwo Kanu',
+			'Austin Jay Jay',
+			'Obafemi Martins',
+		],
+		answer: 'Nwankwo Kanu',
+	},
+	{
+		category: 'Politics',
+		question: 'What is the name of the Nigerian currency?',
+		options: ['Shilling', 'Cedi', 'Naira', 'Franc'],
+		answer: 'Naira',
+	},
+	{
+		category: 'Food',
+		question: 'Which Nigerian state is famous for the pepper soup delicacy?',
+		options: ['Cross River', 'Delta', 'Anambra', 'All of the above'],
+		answer: 'All of the above',
+	},
+	{
+		category: 'History',
+		question: "Lagos served as Nigeria's capital city until which year?",
+		options: ['1985', '1990', '1991', '1995'],
+		answer: '1991',
+	},
+];
+
 export const winners = [
 	{
 		id: 1,

@@ -6,7 +6,7 @@ const SuccessPage = () => {
 	const router = useRouter();
 
 	const handleDismiss = () => {
-		router.push('/');
+		router.push('/play-now/trivia');
 	};
 
 	return (
@@ -24,7 +24,7 @@ const SuccessPage = () => {
 				<button
 					onClick={handleDismiss}
 					className='w-full bg-primary text-black font-semibold py-4 rounded-full transition cursor-pointer shadow-[0px_4px_0px_0px_#0B132A]'>
-					Dismiss
+					Play Quiz
 				</button>
 			</div>
 		</div>
