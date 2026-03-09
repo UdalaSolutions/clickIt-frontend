@@ -5,8 +5,12 @@ import { useRouter } from 'next/navigation';
 const SuccessPage = () => {
 	const router = useRouter();
 
-	const handleDismiss = () => {
+	const handlePlayTrivia = () => {
 		router.push('/play-now/trivia');
+	};
+
+	const handleDismiss = () => {
+		router.push('/');
 	};
 
 	return (
@@ -17,14 +21,20 @@ const SuccessPage = () => {
 				<h1 className='text-3xl font-bold mb-4'>Success!</h1>
 
 				<p className='text-gray-600 mb-8 leading-relaxed text-center'>
-					Your entry has been received. We’ve sent a confirmation SMS to your
-					phone number with your subscription details and draw date.
+					Your entry has been received. Check your SMS for details. Play the
+					Trivia challenge to unlock a spin and boost your chances of winning.
 				</p>
 
 				<button
-					onClick={handleDismiss}
+					onClick={handlePlayTrivia}
 					className='w-full bg-primary text-black font-semibold py-4 rounded-full transition cursor-pointer shadow-[0px_4px_0px_0px_#0B132A]'>
-					Play Quiz
+					Play Trivia
+				</button>
+
+				<button
+					onClick={handleDismiss}
+					className='w-full bg-[#FAAA321A] text-[#FAAA32] font-semibold py-4 rounded-full transition cursor-pointer mt-4'>
+					Dismiss
 				</button>
 			</div>
 		</div>
