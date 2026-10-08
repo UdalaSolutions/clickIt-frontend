@@ -505,7 +505,8 @@ export const termsSections = [
 		title: 'How it works',
 		intro: 'You can participate through ',
 		list: [
-			'SMS- Text the designated keyword to 7033 to subscribe',
+			'SMS- Text the designated keyword (CID, CIW or CIM) to 20067 to subscribe',
+			'USSD - Dial *20067# to subscribe',
 			'Web - Play from our website, enter your details and choose a subscription plan to join easily.',
 		],
 		content: [
