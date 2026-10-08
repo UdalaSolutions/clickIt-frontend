@@ -75,15 +75,15 @@ const PlaysmsModal = ({ closeModal }) => {
 					{/* Pricing Options */}
 					<div className='w-full bg-white rounded-2xl p-4 sm:p-6 text-left space-y-2 shadow-md'>
 						<div className='text-[#1a1a1a]'>
-							<span className='font-bold'>CTD - </span>
+							<span className='font-bold'>CID - </span>
 							<span className='font-normal'>₦100/day</span>
 						</div>
 						<div className='text-[#1a1a1a]'>
-							<span className='font-bold'>CTW - </span>
+							<span className='font-bold'>CIW - </span>
 							<span className='font-normal'>₦150/week</span>
 						</div>
 						<div className='text-[#1a1a1a]'>
-							<span className='font-bold'>CTM - </span>
+							<span className='font-bold'>CIM - </span>
 							<span className='font-normal'>₦500/month</span>
 						</div>
 					</div>
@@ -92,7 +92,15 @@ const PlaysmsModal = ({ closeModal }) => {
 					<div className='text-center'>
 						<p className='text-[#666666] text-sm mb-1'>To</p>
 						<p className='text-[#1a1a1a] font-bold xs:text-xl text-2xl md:text-4xl'>
-							7033
+							20067
+						</p>
+					</div>
+
+					{/* USSD */}
+					<div className='text-center'>
+						<p className='text-[#666666] text-sm mb-1'>Or dial</p>
+						<p className='text-[#1a1a1a] font-bold xs:text-xl text-2xl md:text-4xl'>
+							*20067#
 						</p>
 					</div>
 				</div>
