@@ -50,14 +50,16 @@ const Footer = () => {
 								</p>
 
 								<div className='mt-8 flex flex-col sm:flex-row items-center justify-center gap-4'>
+									{/* TODO: re-enable once web play is live
 									<Link
 										href='/play-now'
 										className='w-full sm:w-auto bg-primary text-[#0B132A] flex items-center justify-center text-base font-bold rounded-full py-2.5 px-10 hover:scale-[1.02] transition-transform'>
 										Play via website
 									</Link>
+									*/}
 
 									<button
-										className='w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#081726] text-base font-bold py-2.5 px-10 rounded-full shadow-2xl hover:scale-[1.02] transition-transform border border-primary text-primary cursor-pointer'
+										className='w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-primary text-[#0B132A] text-base font-bold py-2.5 px-10 rounded-full shadow-2xl hover:scale-[1.02] transition-transform cursor-pointer'
 										aria-label='SMS CTA'
 										onClick={() => setIsOpen(true)}>
 										<span>Play via SMS</span>

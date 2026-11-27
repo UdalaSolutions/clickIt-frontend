@@ -90,12 +90,16 @@ const PlaysmsModal = ({ closeModal }) => {
 					{/* Pricing Options */}
 					<div className='w-full bg-white rounded-2xl p-4 sm:p-6 text-left space-y-2 shadow-md'>
 						<div className='text-[#1a1a1a]'>
+							<span className='font-bold'>CIOD - </span>
+							<span className='font-normal'>₦50 one-time</span>
+						</div>
+						<div className='text-[#1a1a1a]'>
 							<span className='font-bold'>CID - </span>
-							<span className='font-normal'>₦100/day</span>
+							<span className='font-normal'>₦150/day</span>
 						</div>
 						<div className='text-[#1a1a1a]'>
 							<span className='font-bold'>CIW - </span>
-							<span className='font-normal'>₦150/week</span>
+							<span className='font-normal'>₦250/6 days</span>
 						</div>
 						<div className='text-[#1a1a1a]'>
 							<span className='font-bold'>CIM - </span>

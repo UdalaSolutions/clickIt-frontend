@@ -505,7 +505,7 @@ export const termsSections = [
 		title: 'How it works',
 		intro: 'You can participate through ',
 		list: [
-			'SMS- Text the designated keyword (CID, CIW or CIM) to 20067 to subscribe',
+			'SMS- Text the designated keyword (CIOD, CID, CIW or CIM) to 20067 to subscribe',
 			'USSD - Dial *20067# to subscribe',
 			'Web - Play from our website, enter your details and choose a subscription plan to join easily.',
 		],
@@ -515,14 +515,15 @@ export const termsSections = [
 	},
 	{
 		title: 'Subscription plans',
-		intro: 'Click-It offers three subscription options for entry: ',
+		intro: 'Click-It offers four subscription options for entry: ',
 		list: [
-			'₦100 Daily Access — Valid for 24 hours (enters you into the next available draw)',
-			'₦150 Weekly Draw — Automatically enters you into the next weekly draw',
-			'₦500 Monthly Draw — Automatically enters you into the next monthly draw',
+			'₦50 On-Demand Entry (CIOD) — A one-time entry into the next available draw',
+			'₦150 Daily Access (CID) — Valid for 24 hours (enters you into the next available draw)',
+			'₦250 6-Day Access (CIW) — Automatically enters you into the next weekly draw',
+			'₦500 Monthly Draw (CIM) — Automatically enters you into the next monthly draw',
 		],
 		content: [
-			'While there are three access levels, draws are conducted only weekly and monthly. Daily access simply grants temporary entry into the upcoming eligible draw.',
+			'While there are four access levels, draws are conducted only weekly and monthly. On-demand and daily access simply grant entry into the upcoming eligible draw.',
 		],
 	},
 	{

@@ -34,20 +34,22 @@ const Hero = () => {
 				</div>
 
 				<div className='flex max-w-[624px] gap-6 items-center mt-5 flex-col sm:flex-row'>
+					{/* TODO: re-enable once web play is live
 					<Link
 						href='/play-now'
-						className='bg-primary text-[#1A1A1A] font-bold rounded-[50px] shadow-[0px_4px_0px_0px_#0B132A] 
+						className='bg-primary text-[#1A1A1A] font-bold rounded-[50px] shadow-[0px_4px_0px_0px_#0B132A]
     flex items-center justify-center py-3.5 min-w-[294px] md:min-w-[300px]
     hover:shadow-[0px_6px_0px_0px_white]
     transition-all duration-300 delay-200
     transform hover:scale-[1.0] active:scale-[0.97]'>
 						Play via website
 					</Link>
+					*/}
 
 					<div
-						className='text-primary border border-primary bg-white py-3 px-6 rounded-full flex items-center 
-    gap-2.5 font-bold justify-center min-w-[294px] md:min-w-[300px] cursor-pointer
-    hover:bg-[#FFF7EB] hover:border-[#FFF7EB]
+						className='bg-primary text-[#1A1A1A] font-bold rounded-[50px] shadow-[0px_4px_0px_0px_#0B132A]
+    flex items-center justify-center py-3.5 min-w-[294px] md:min-w-[300px] cursor-pointer
+    hover:shadow-[0px_6px_0px_0px_white]
     transition-all duration-300 delay-200
     transform hover:scale-[1.0] active:scale-[0.97]'
 						onClick={() => setIsOpen(true)}>

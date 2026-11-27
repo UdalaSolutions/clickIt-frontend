@@ -3,6 +3,13 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+const PLANS = [
+	{ value: 'CIOD', label: '₦50 one-time' },
+	{ value: 'CID', label: '₦150/day' },
+	{ value: 'CIW', label: '₦250/6 days' },
+	{ value: 'CIM', label: '₦500/month' },
+];
+
 const LotteryForm = () => {
 	const router = useRouter();
 	const [phone, setPhone] = useState('');
@@ -49,41 +56,21 @@ const LotteryForm = () => {
 							Select plan
 						</label>
 						<div className='space-y-3'>
-							<label className='flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition bg-white'>
-								<span className='font-medium'>₦100/day</span>
-								<input
-									type='radio'
-									name='plan'
-									value='100'
-									checked={plan === '100'}
-									onChange={(e) => setPlan(e.target.value)}
-									className='w-5 h-5 accent-black'
-								/>
-							</label>
-
-							<label className='flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition bg-white'>
-								<span className='font-medium'>₦150/week</span>
-								<input
-									type='radio'
-									name='plan'
-									value='150'
-									checked={plan === '150'}
-									onChange={(e) => setPlan(e.target.value)}
-									className='w-5 h-5 accent-black'
-								/>
-							</label>
-
-							<label className='flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition bg-white'>
-								<span className='font-medium'>₦500/month</span>
-								<input
-									type='radio'
-									name='plan'
-									value='500'
-									checked={plan === '500'}
-									onChange={(e) => setPlan(e.target.value)}
-									className='w-5 h-5 accent-black'
-								/>
-							</label>
+							{PLANS.map(({ value, label }) => (
+								<label
+									key={value}
+									className='flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition bg-white'>
+									<span className='font-medium'>{label}</span>
+									<input
+										type='radio'
+										name='plan'
+										value={value}
+										checked={plan === value}
+										onChange={(e) => setPlan(e.target.value)}
+										className='w-5 h-5 accent-black'
+									/>
+								</label>
+							))}
 						</div>
 					</div>
 
